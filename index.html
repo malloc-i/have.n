@@ -1,15 +1,67 @@
-  <style type="text/css" >
-        body {
-          background-color: black;
-          color: white;
-        }
-        .loader {
-          background-color: black;
-          color: white;
-        }
+<html>
+  <head>
+    <style>
+    @font-face {
+   font-family: myFirstFont;
+   src: url(https://malloc-i.github.io/have.n/fonts/EUROCAPS.TTF);
+}
+
+* {
+   font-family: myFirstFont;
+}
+      body {
+        background-color: #000;
+        vertical-align: middle;
+        text-align: center;
+        font-family: myFirstFont;
+        src: url(sansation_light.woff);
+      }
+      #page-div {
+        width: 100%;
+        text-align: center;
+        background-color: #000;
+      }
+      #screen-div {
+        display: inline-block;
+        width: 960;
+        height: 540;
+        text-align: center;
+        background-color: #000;
+        vertical-align: middle;
+        color: #999;
+      }
+      #screen-page-div {
+        display: table-cell;
+        width: 960;
+        height: 540;
+        text-align: center;
+        background-color: #000;
+        vertical-align: middle;
+        border: 3px solid #999;
+        color: #999;
+      }
+      #loading-div {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 3px;
+        background-color: #000;
+      }
+      .ship {
+        height: 400px;
+      }
+      .title {
+      	font-weight: bold;
+        font-size: 64px;
+      }
     </style>
-<center><div id="loader">
-<svg style="height:170px" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  </head>
+  <body>
+  <div id="page-div">
+    <div id="screen-div"><div id="screen-page-div">
+    <div class=title>Have.N</div>
+    <div class=subtitle>Drake-Class Fleet Carrier</div>
+    <img class=ship src="https://malloc-i.github.io/have.n/images/HaveN.png" />
+      <div id="loading-div"><svg style="height:170px" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <style type="text/css" >
       <![CDATA[
         @keyframes outer {
@@ -149,4 +201,7 @@
   <path d="m10,16l5,8l5,-8z" class="l2 d15" />
 </svg>
 <p/>
-Coming Soon...</div></center>
+Coming Soon...</div>
+    </div></div></div>
+  </body>
+</html>
