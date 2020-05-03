@@ -26,6 +26,15 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.H
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;              /* default value; can be omitted */
+  justify-content: space-between; /* switched from default (flex-start, see below) */
+}
 
 /* content of this box will be centered vertically */
 .boxV
@@ -44,35 +53,59 @@ body {
   width: 960;
   height: 540;
   border: 3px solid #999;
+  text-align: center;
 }
-      #loading-div {
-      position: fixed;
-        width: 240;
-        height: 240;
-        left: 50%;
-        margin: 0 -100;
-        padding: 3px;
-        background-color: #000;
-        border: 3px solid #999;
-      }
+ .info
+{
+  width: 300;
+  height: 300;
+  text-align: left;
+  padding: 4px;
+  margin: 4px;
+}
       .ship {
         height: 400px;
       }
+      .fc-icon {
+        display: flex;
+        height: 64px;
+        width: 64px;
+      }
       .title {
-      	font-weight: bold;
+        display: flex;
+        font-weight: bold;
         font-size: 64px;
+        text-align: center;
+        vertical-align: text-top;
+        line-height: 64px;
+        height: 64px;
+      }
+      #loading-div {
+        display: flex;
+        right: 0px;
+      }
+      .fc-icon-div {
+        
+      }
+      .content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .button-holder {
+        flex-direction: column;
+      }
+      .button {
+        width: 128px;
+        
       }
 </style>
-<head>
-  <title>Have.N</title>
-</head>
 <div class="boxH">
   <div class="boxV">
     <div class="boxM">
-      <div class=title>Have.N</div>
-    <div class=subtitle>Drake-Class Fleet Carrier</div>
-    <img class=ship src="https://malloc-i.github.io/have.n/images/HaveN.png" />
-    </div><div id="loading-div"><p /><svg style="height:170px" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <div class=H>
+      <div class="fc-icon-div"><img class="fc-icon" src="https://malloc-i.github.io/have.n/images/FC-symbol.png" /></div><div class=title> Have.N</div>
+      <div id="loading-div"><svg style="height:54px" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <style type="text/css" >
       <![CDATA[
         @keyframes outer {
@@ -210,8 +243,24 @@ body {
   <path d="m20,16l5,8l5,-8z" class="l2 d9" />
   <path d="m15,24l5,-8l5,8z" class="l2 d12" />
   <path d="m10,16l5,8l5,-8z" class="l2 d15" />
-</svg><div>
-Fleet Carrier
-Under Construction...</div></div>
+</svg>
+
+</div>
+      </div>
+      <div class=subtitle>Drake-Class Extralegal Sim-Archive</div>
+      <div class=content>
+        <div class=ship><img height=400 src="https://malloc-i.github.io/have.n/images/HaveN.png" /></div>
+        <div class="button-holder">
+          <div class="button"><img width=100 src="https://edassets.org/static/img/missions/delivery-pirate.png" /></div>
+          <div class="button"><img width=100 src="https://edassets.org/static/img/missions/pirate-timed.png" /></div>
+          <div class="button"><img width=100 src="https://edassets.org/static/img/missions/planetary-data-unknown-mission.png" /></div>
+        </div>
+        <div class="info">
+          <div>Anonymous access protocol...</div>
+          <div>Under Construction...</div>
+        </div>
+      </div>
+    </div>
+      
   </div>
 </div>
